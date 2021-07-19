@@ -7,4 +7,4 @@ Target = cloudreve-bin
 Description = Initialize secrets and data directory
 When = PostTransaction
 Exec = /usr/share/libalpm/scripts/cloudreve-init.sh
-Depends = egrep
+Depends = grep

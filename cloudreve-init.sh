@@ -12,12 +12,12 @@ if ! id -u cloudreve >/dev/null 2>&1; then
     useradd -r -d /opt/cloudreve -s /bin/nologin cloudreve
 fi
 # Create database dir if not exist
-if [ -d "/opt/cloudreve/database" ]; then
+if [ ! -d "/opt/cloudreve/database" ]; then
     mkdir -p /opt/cloudreve/database
     chown -R cloudreve:cloudreve /opt/cloudreve/database
 fi
 # Create file dir if not exist
-if [ -d "/opt/cloudreve/uploads" ]; then
+if [ ! -d "/opt/cloudreve/uploads" ]; then
     mkdir -p /opt/cloudreve/uploads
     chown -R cloudreve:cloudreve /opt/cloudreve/uploads
 fi
