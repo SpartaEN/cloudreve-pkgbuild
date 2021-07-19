@@ -1,0 +1,10 @@
+[Trigger]
+Type = Package
+Operation = Install
+Target = cloudreve-bin
+
+[Action]
+Description = Initialize secrets and data directory
+When = PostTransaction
+Exec = /usr/share/libalpm/scripts/cloudreve-init.sh
+Depends = egrep

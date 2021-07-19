@@ -1,0 +1,21 @@
+[Unit]
+Description=Cloudreve
+After=network.target
+Documentation=https://docs.cloudreve.org/
+Wants=network.target
+
+[Service]
+Type=simple
+User=cloudreve
+Groups=cloudreve
+WorkingDirectory=/opt/cloudreve
+ExecStart=/opt/cloudreve/cloudreve -c /etc/cloudreve.ini
+Restart=on-abnormal
+RestartSec=5s
+KillMode=mixed
+
+StandardOutput=null
+StandardError=syslog
+
+[Install]
+WantedBy=multi-user.target

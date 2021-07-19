@@ -1,0 +1,7 @@
+# Temp files
+pkg
+src
+*.tar.gz
+*.zst
+# Test purpose
+Dockerfile
