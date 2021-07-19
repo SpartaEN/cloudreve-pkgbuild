@@ -9,7 +9,7 @@ if ! egrep '^HashIDSalt = \w+' /etc/cloudreve.ini; then
 fi
 # Create account if not exists
 if ! id -u cloudreve >/dev/null 2>&1; then
-    useradd -r -d /opt/cloudreve -s /bin/nologin cloudreve
+    useradd -r -c "Cloudreve user" -d /opt/cloudreve -s /bin/nologin cloudreve
 fi
 # Create database dir if not exist
 if [ ! -d "/opt/cloudreve/database" ]; then
